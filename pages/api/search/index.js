@@ -1,7 +1,7 @@
 const methods = require("micro-method-router");
-
 export default methods({
   async get(req, res) {
-    res.status(200).send(`It's a GET request!`);
+    const query = req.query;
+    res.status(200).json({ titulo: `It's a GET request!`, query });
   },
 });
